@@ -8,7 +8,7 @@
     function MenuAppListController(MenuAppListService,categories) {
       var ctrl = this;
   
-
+     console.log("menu");
      ctrl.categories = categories;
   
       

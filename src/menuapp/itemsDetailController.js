@@ -7,10 +7,11 @@
     // 'items' is injected through state's resolve
     ItemDetailController.$inject = ["$stateParams", "items"]
     function ItemDetailController($stateParams, items) {
-      var itemDetail = this;
-      var item = items[$stateParams.itemId];
-      itemDetail.name= items.name;
-    
+      var ctrl = this;
+      ctrl.items= items;
+      console.log(ctrl.items);
+      ctrl.name=items.name;
+      ctrl.items.name=items.name;
     }
 
     })();

@@ -45,7 +45,7 @@
   .state('categories.items', {
     url: '/items{shortName}',
     templateUrl: 'src/template/item-detail.template.htm',
-    controller: 'ItemDetailController as itemDetail',
+    controller: 'ItemDetailController as ctrl',
     params:       { shortName: null },
     resolve: {
       items: [ "$stateParams", "MenuAppListService", function($stateParams, MenuAppListService) {
