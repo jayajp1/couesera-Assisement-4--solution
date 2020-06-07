@@ -1,0 +1,24 @@
+<ul>
+  <!-- <li ng-repeat="item in $ctrl.list"
+      ui-sref="itemDetail({itemId: $index})">
+     {{ item.name }}
+   </li> -->
+
+<li ng-repeat="item in ctrl.list">{{item.name}}</li>
+<ul>
+  <!-- <li ng-repeat="cat in ctrl.categories">
+    <button ui-sref="categories.items({shortName:cat.short_name})">{{cat.name}} 
+        {{cat.short_name}}</button>
+  </li> -->
+  <li ng-repeat="item in $ctrl.list"
+      ui-sref="items({shortName})">
+      <button ui-sref="categories.items({shortName:cat.short_name})">{{item.name}} 
+        {{item.short_name}} </button>
+  </li>
+</ul> 
+<ul>
+  <li ng-repeat="item in $ctrl.items"
+      ui-sref="mainList.itemDetail({itemId: $index})">
+    {{ item.quantity }} of {{ item.name }}
+  </li>
+</ul>
